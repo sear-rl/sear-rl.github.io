@@ -22,12 +22,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta property="og:site_name" content="Efficient RL via Disentangled Environment and Agent Representations" />
-  <meta property="og:type" content="video.other" />
+  <meta property="og:type" content="article" />
   <meta property="og:title" content="Efficient RL via Disentangled Environment and Agent Representations" />
   <meta property="og:description" content="Efficient RL via Disentangled Environment and Agent Representations" />
   <meta property="og:url" content="http://sear-rl.github.io" />
   <meta property="og:image" content="http://sear-rl.github.io/resources/teaser.png" />
-  <meta property="og:video" content="http://sear-rl.github.io/resources/main_vid.mp4" />
+  <meta property="og:video" content="" />
 
   <meta property="article:publisher" content="http://sear-rl.github.io/" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -37,12 +37,10 @@
   <meta property="og:image:width" content="1600" />
   <meta property="og:image:height" content="900" />
 
-  <script src="https://www.youtube.com/iframe_api"></script>
-  <meta name="twitter:card" content="player" />
-  <meta name="twitter:player" content="" />
-  <meta name="twitter:player:width" content="640" />
-  <meta name="twitter:player:height" content="360" />
-
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Efficient RL via Disentangled Environment and Agent Representations" />
+  <meta name="twitter:description" content="Efficient RL via Disentangled Environment and Agent Representations" />
+  <meta name="twitter:image" content="http://sear-rl.github.io/resources/teaser.png" />
 
   <title>Efficient RL via Disentangled Environment and Agent Representations</title>
 
@@ -74,25 +72,28 @@
               Representations </h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
-                <a href="https://sites.google.com/view/kevin-gmelin">Kevin Gmelin</a><sup>1</sup>,</span>
+                <a href="https://sites.google.com/view/kevin-gmelin">Kevin Gmelin</a>,</span>
               <span class="author-block">
-                <a href="https://www.cs.cmu.edu/~sbahl2/">Shikhar Bahl</a><sup>1</sup>,</span>
+                <a href="https://www.cs.cmu.edu/~sbahl2/">Shikhar Bahl</a>,</span>
               <span class="author-block">
-                <a href="https://russellmendonca.github.io/">Russell Mendonca</a><sup>1</sup>,
+                <a href="https://russellmendonca.github.io/">Russell Mendonca</a>,
               </span>
               <span class="author-block">
-                <a href="https://www.cs.cmu.edu/~dpathak/">Deepak Pathak</a><sup>1</sup>,
+                <a href="https://www.cs.cmu.edu/~dpathak/">Deepak Pathak</a>,
               </span>
             </div>
 
             <div class="is-size-5 publication-authors">
-              <span class="author-block"><sup>1</sup>Carnegie Mellon University</span>
+              <span class="author-block">Carnegie Mellon University</span>
+            </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">ICML 2023</span>
             </div>
 
             <div class="column has-text-centered">
               <div class="publication-links">
                 <span class="link-block">
-                  <a href="https://openreview.net/pdf?id=kWS8mpioS9"
+                  <a href="http://proceedings.mlr.press/v202/gmelin23a/gmelin23a.pdf"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -114,6 +115,15 @@
                       <i class="far fa-images"></i>
                     </span>
                     <span>Poster</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://icml.cc/virtual/2023/oral/25479"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-video"></i>
+                    </span>
+                    <span>Oral</span>
                   </a>
                 </span>
                 <span class="link-block">
@@ -143,27 +153,38 @@
           <img src="./resources/teaser.png" alt="Figure" width="50%">
         </div>
         <br>
-        <h2 class="subtitle has-text-centered">
-          Can we leverage the distinction between inner-self and outer-environment to improve visual RL?
-        </h2>
+        <div class="content has-text-justified is-size-5">
+          In robotics and AI, the question of how a machine perceives and interacts with its environment is a complex
+          puzzle. While humans and animals have an innate "sense of self" that allows them to navigate and manipulate
+          the world efficiently, most robotic systems struggle with this concept. They often require massive amounts of
+          data to learn even simple tasks, and their adaptability across different environments or tasks is limited.
+          <br>
+          <br>
+          What if robots could have a more nuanced understanding of themselves in relation to their surroundings? What
+          if they could distinguish between their "inner-self" and the "outer-environment," much like biological
+          entities do? Motivated by these questions, our paper seeks to tackle the following question:
+        </div>
+        <div class="box is-size-3 has-text-centered has-background-primary">
+          Can we learn and leverage the distinction between inner-self and outer-environment to improve visual RL?
+        </div>
       </div>
     </div>
   </section>
 
   <section class="hero is-light is-small">
     <div class="hero-body">
-      <div class="container is-two-thirds">
+      <div class="container">
         <div class="columns is-centered has-text-centered">
           <div class="column is-two-thirds ">
             <h2 class="title is-2">Abstract</h2>
-            <div class="content has-text-justified">
-              Agents that are aware of the separation between the environments and themselves can leverage this
-              understanding to form effective representations of visual input. We propose an approach for learning such
-              structured representations for RL algorithms, using visual knowledge of the agent, which is often
-              inexpensive to obtain, such as its shape or mask. This is incorporated into the RL objective using a
-              simple auxiliary loss. We show that our method, SEAR (Structured Environment-Agent Representations),
-              outperforms state-of-the-art model-free approaches over 18 different challenging visual simulation
-              environments spanning 5 different robots.
+            <div class="content has-text-justified is-size-5">
+              Agents that are aware of the separation between themselves and their environments can leverage this
+              understanding to form effective representations of visual input. We propose an approach for learning
+              such structured representations for RL algorithms, using visual knowledge of the agent, such as its shape
+              or mask, which is often inexpensive to obtain. This is incorporated into the RL objective using a simple
+              auxiliary loss. We show that our method, Structured Environment-Agent Representations (SEAR), outperforms
+              state-of-the-art model-free approaches over 18 different challenging visual simulation environments
+              spanning 5 different robots.
             </div>
           </div>
         </div>
@@ -174,25 +195,18 @@
 
   <br>
   <section>
-    <div class="columns is-centered">
-      <div class="container">
-        <div class="column is-full-width">
-          <h2 class="title is-2" style="text-align: center;">How do we model agent-environment decoupling in visual RL?
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3" style="text-align: center;">How do we model agent-environment decoupling in visual RL?
           </h2>
-          <tr>
-            <td>
-              <br>
-              <div class="columns is-centered has-text-centered">
-                <img src="./resources/pgm.png" alt="Figure" width="30%">
-              </div>
-            </td>
-          </tr>
+          <div class="columns is-centered has-text-centered">
+            <img src="./resources/pgm.png" alt="Figure" width="50%">
+          </div>
           <div class="is-vcentered">
-            <div class="content has-text-centered">
-              <p style="font-size: 18px">
-                Rather than directly model a single latent variable from an input image, we separately include a latent
-                to represent agent-specific visual information.
-              </p>
+            <div class="content has-text-centered is-size-5">
+              Rather than directly model a single latent variable from an input image, we add a latent, Z<sub>R</sub>,
+              to represent agent-specific visual information.
             </div>
           </div>
         </div>
@@ -202,40 +216,55 @@
 
   <br>
   <section>
-    <div class="columns is-centered">
-      <div class="container">
-        <div class="column is-full-width">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
           <h2 class="title is-3" style="text-align: center;">How do we obtain robot-specific visual supervision?</h2>
-          <tr>
-            <td>
-              <br>
-              <div class="columns is-centered has-text-centered">
-                <img src="./resources/sim-seg.png" alt="Figure" width="50%">
-              </div>
-            </td>
-          </tr>
+          <br>
+          <div class="columns is-centered has-text-centered">
+            <img src="./resources/sim-seg.png" alt="Figure" width="63%">
+          </div>
           <div class="is-vcentered">
-            <div class="content has-text-centered">
-              <p style="font-size: 18px">
-                We can directly get robot masks from a simulator.
-              </p>
+            <div class="content has-text-centered is-size-5">
+              We can directly get robot masks from a simulator.
             </div>
           </div>
-          <tr>
-            <td>
-              <br>
-              <div class="columns is-centered has-text-centered">
-                <img src="./resources/real-seg.png" alt="Figure" width="50%">
-              </div>
-            </td>
-          </tr>
+          <br>
+          <div class="columns is-centered has-text-centered">
+            <img src="./resources/real-seg.png" alt="Figure" width="63%">
+          </div>
           <div class="is-vcentered">
-            <div class="content has-text-centered">
-              <p style="font-size: 18px">
-                Or we can fine-tune a segmentation model. Furthermore, there are many off-the-shelf segmentation models,
-                such as <a href="https://segment-anything.com/">segment-anything</a>, that can be used to provide
-                robot-specific visual information.
-              </p>
+            <div class="content has-text-centered is-size-5">
+              Or we can fine-tune a segmentation model. Furthermore, there are many off-the-shelf segmentation models,
+              such as <a href="https://segment-anything.com/">segment-anything</a>, that can be used to provide
+              robot-specific visual information.
+            </div>
+          </div>
+          <br>
+          <div class="box is-size-4 has-text-centered has-background-light">
+            Robot masks are a natural and readily-available form of robot-specific visual information.
+          </div>
+          <br>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3" style="text-align: center;">How do we incorporate this into a visual RL algorithm?</h2>
+          <br>
+          <div class="columns is-centered has-text-centered">
+            <img src="./resources/method.png" alt="Figure" width="63%">
+          </div>
+          <div class="is-vcentered">
+            <div class="content has-text-centered is-size-5">
+              We augment the RL loss with agent-centric and environment-centric losses. In particular, we reconstruct
+              a robot mask from the agent-centric latent and reconstruct the input image from the environment-centric
+              latent. We supervise our input image encoder jointly with an RL loss, a robot mask reconstruction loss,
+              and an image reconstruction loss.
             </div>
           </div>
         </div>
@@ -244,51 +273,48 @@
   </section>
 
   <section>
-    <div class="columns is-centered">
-      <div class="container">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <br>
+          <h2 class="title is-3" style="text-align: center;">Experimental Setup</h2>
+          <br>
+          <div class="columns is-centered has-text-centered">
+            <img src="./resources/envs.png" alt="Figure" width="63%">
+          </div>
+          <div class="is-vcentered">
+            <div class="content has-text-centered is-size-5">
+              We train SEAR on 18 tasks spanning 5 robots across 4 simulation suites, in single-task, transfer, and
+              multi-task settings.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="columns is-centered">
         <!-- <br> -->
-        <div class="column is-full-width">
-          <h2 class="title is-2" style="text-align: center;">How do we incorporate this into a visual RL algorithm?</h2>
-          <tr>
-            <td>
-              <br>
-              <div class="columns is-centered has-text-centered">
-                <img src="./resources/method.png" alt="Figure" width="50%">
-              </div>
-            </td>
-          </tr>
-          <div class="is-vcentered">
-            <div class="content has-text-centered">
-              <p style="font-size: 18px">
-                We augment the RL loss with agent-centric and environment-centric losses.
-              </p>
-            </div>
+        <div class="column is-four-fifths">
+          <br>
+          <h2 class="title is-3" style="text-align: center;">How does SEAR perform in single-task settings?</h2>
+          <br>
+          <div class="columns is-centered has-text-centered">
+            <img src="./resources/mtw.png" alt="Figure" width="93%">
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- <br> -->
-  <section>
-    <div class="columns is-centered">
-      <div class="container">
-        <div class="column is-full-width">
-          <h2 class="title is-2" style="text-align: center;">Experimental Setup</h2>
-          <tr>
-            <td>
-              <br>
-              <div class="columns is-centered has-text-centered">
-                <img src="./resources/envs.png" alt="Figure" width="50%">
-              </div>
-            </td>
-          </tr>
+          <br>
+          <div class="columns is-centered has-text-centered">
+            <img src="./resources/frnka.png" alt="Figure" width="93%">
+          </div>
+          <br>
+          <div class="columns is-centered has-text-centered">
+            <img src="./resources/dg.png" alt="Figure" width="93%">
+          </div>
           <div class="is-vcentered">
-            <div class="content has-text-centered">
-              <p style="font-size: 18px">
-                We train SEAR on 18 tasks spanning 5 robots across 4 simulation suites, in single-task, transfer, and
-                multi-task setings.
-              </p>
+            <div class="content has-text-centered is-size-5">
+              SEAR matches or exceeds baselines in single-task settings.
             </div>
           </div>
         </div>
@@ -297,40 +323,18 @@
   </section>
 
   <section>
-    <div class="columns is-centered">
-      <div class="container">
-        <!-- <br> -->
-        <div class="column is-full-width">
-          <h2 class="title is-2" style="text-align: center;">How does SEAR perform in single-task settings?</h2>
-          <tr>
-            <td>
-              <br>
-              <div class="columns is-centered has-text-centered">
-                <img src="./resources/mtw.png" alt="Figure" width="50%">
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <br>
-              <div class="columns is-centered has-text-centered">
-                <img src="./resources/frnka.png" alt="Figure" width="50%">
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <br>
-              <div class="columns is-centered has-text-centered">
-                <img src="./resources/dg.png" alt="Figure" width="50%">
-              </div>
-            </td>
-          </tr>
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <br>
+          <h2 class="title is-3" style="text-align: center;">What about transfer learning?</h2>
+          <br>
+          <div class="columns is-centered has-text-centered">
+            <img src="./resources/transfer.png" alt="Figure" width="93%">
+          </div>
           <div class="is-vcentered">
-            <div class="content has-text-centered">
-              <p style="font-size: 18px">
-                SEAR matches or exceeds baselines in single-task settings.
-              </p>
+            <div class="content has-text-centered is-size-5">
+              SEAR seems to learn representations useful for transfer learning.
             </div>
           </div>
         </div>
@@ -339,23 +343,18 @@
   </section>
 
   <section>
-    <div class="columns is-centered">
-      <div class="container">
-        <div class="column is-full-width">
-          <h2 class="title is-2" style="text-align: center;">What about transfer learning?</h2>
-          <tr>
-            <td>
-              <br>
-              <div class="columns is-centered has-text-centered">
-                <img src="./resources/transfer.png" alt="Figure" width="75%">
-              </div>
-            </td>
-          </tr>
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <br>
+          <h2 class="title is-3" style="text-align: center;">How does SEAR perform for multi-task learning?</h2>
+          <br>
+          <div class="columns is-centered has-text-centered">
+            <img src="./resources/multi.png" alt="Figure" width="93%">
+          </div>
           <div class="is-vcentered">
-            <div class="content has-text-centered">
-              <p style="font-size: 18px">
-                SEAR seems to learn representations useful for transfer learning.
-              </p>
+            <div class="content has-text-centered is-size-5">
+              While SEAR matches baselines, more work is needed to improve SEAR for the multi-task setting.
             </div>
           </div>
         </div>
@@ -364,91 +363,87 @@
   </section>
 
   <section>
-    <div class="columns is-centered">
-      <div class="container">
-        <div class="column is-full-width">
-          <h2 class="title is-2" style="text-align: center;">How does SEAR perform for multi-task learning?</h2>
-          <tr>
-            <td>
-              <br>
-              <div class="columns is-centered has-text-centered">
-                <img src="./resources/multi.png" alt="Figure" width="75%">
-              </div>
-            </td>
-          </tr>
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <br>
+          <h2 class="title is-3" style="text-align: center;">How do noisy mask labels impact SEAR's peformance?</h2>
+          <br>
+          <div class="columns is-centered has-text-centered">
+            <img src="./resources/noisy_masks.png" alt="Figure" width="63%">
+          </div>
           <div class="is-vcentered">
-            <div class="content has-text-centered">
-              <p style="font-size: 18px">
-                While SEAR matches baselines, more work is needed to improve SEAR for the multi-task setting.
-              </p>
+            <div class="content has-text-centered is-size-5">
+              We generate noisy mask labels in simulation by randomly dropping pixels or downsampling the mask.
+            </div>
+          </div>
+          <br>
+          <div class="columns is-centered has-text-centered">
+            <img src="./resources/noisy_mask_results.png" alt="Figure" width="63%">
+          </div>
+          <div class="is-vcentered">
+            <div class="content has-text-centered is-size-5">
+              While noisy masks hurt performance, SEAR is still able to outperform baselines.
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="columns is-centered">
-      <div class="container">
-        <div class="column is-full-width">
-          <h2 class="title is-2" style="text-align: center;">How do noisy mask labels impact SEAR's peformance?</h2>
-          <tr>
-            <td>
-              <br>
-              <div class="columns is-centered has-text-centered">
-                <img src="./resources/noisy_masks.png" alt="Figure" width="50%">
-              </div>
-            </td>
-          </tr>
-          <div class="is-vcentered">
-            <div class="content has-text-centered">
-              <p style="font-size: 18px">
-                We generate noisy mask labels in simulation by randomly dropping pixels or downsampling the mask.
-              </p>
-            </div>
-          </div>
-          <tr>
-            <td>
-              <br>
-              <div class="columns is-centered has-text-centered">
-                <img src="./resources/noisy_mask_results.png" alt="Figure" width="50%">
-              </div>
-            </td>
-          </tr>
-          <div class="is-vcentered">
-            <div class="content has-text-centered">
-              <p style="font-size: 18px">
-                While noisy masks do hurt performance, SEAR is still able to outperform baselines.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>@inproceedings{gmelin2023efficient,
-              title={Efficient RL via Disentangled Environment and Agent Representations},
-              author={Gmelin, Kevin and Bahl, Shikhar and Mendonca, Russell and Pathak, Deepak},
-              journal={ICML},
-              year={2023}
-            }</code></pre>
     </div>
   </section>
 
   <section class="section">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-2 has-text-centered">Key Takeaways</h2>
+          <div class="box is-half">
+            <ul>
+              <li class="is-size-4"><span class="icon has-text-info"><i class="fas fa-tachometer-alt"></i></span>
+                Takeaway 1: Decoupled representation boosts performance.</li>
+              <li class="is-size-4"><span class="icon has-text-danger"><i class="fas fa-exchange-alt"></i></span>
+                Takeaway 2: SEAR can help with transfer.</li>
+              <li class="is-size-4"><span class="icon has-text-warning"><i class="fas fa-check-circle"></i></span>
+                Takeaway 3: Masks are readily available from sim or shelf-supervised models.</li>
+              <li class="is-size-4"><span class="icon has-text-success"><i class="fas fa-plus-circle"></i></span>
+                Takeaway 4: SEAR can be easily added to any visual RL approach.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre>
+        <code>
+@InProceedings{pmlr-v202-gmelin23a,
+  title = {Efficient {RL} via Disentangled Environment and Agent Representations},
+  author = {Gmelin, Kevin and Bahl, Shikhar and Mendonca, Russell and Pathak, Deepak},
+  booktitle = {Proceedings of the 40th International Conference on Machine Learning},
+  pages = {11525--11545},
+  year = {2023},
+  editor = {Krause, Andreas and Brunskill, Emma and Cho, Kyunghyun and Engelhardt, Barbara and Sabato, 
+            Sivan and Scarlett, Jonathan},
+  volume = {202},
+  series = {Proceedings of Machine Learning Research},
+  month = {23--29 Jul},
+  publisher = {PMLR},
+  pdf = {https://proceedings.mlr.press/v202/gmelin23a/gmelin23a.pdf},
+  url = {https://proceedings.mlr.press/v202/gmelin23a.html},
+}</code>
+    </pre>
+    </div>
+  </section>
+
+  <section>
     <div class="container is-max-desktop content">
       <h2 class="title">Acknowledgements</h2>
       <div class="is-vcentered interpolation-panel">
-        <div class="container content">
-          <p style="font-size: 16px">
-            We would like to thank Alexander C. Li and Murtaza Dalal for fruitful discussions. This work is supported by
-            Sony Faculty Research Award and NSF IIS-2024594.
-          </p>
+        <div class="container content is-size-5">
+          We would like to thank Alexander C. Li and Murtaza Dalal for fruitful discussions. This work is supported by
+          Sony Faculty Research Award and NSF IIS-2024594.
         </div>
       </div>
     </div>
@@ -457,10 +452,6 @@
   <footer class="footer">
     <div class="container">
       <div class="content has-text-centered">
-        <!-- <a class="large-font bottom_buttons" disabled>
-        <i class="fab fa-github"></i>
-      </a> -->
-        <!-- <br /> -->
         <p>Page template borrowed from <a href="https://nerfies.github.io"><span class="dnerf">Nerfies</span></a>.</p>
       </div>
     </div>
